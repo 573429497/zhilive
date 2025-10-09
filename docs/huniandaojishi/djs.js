@@ -82,7 +82,7 @@ function audioClose() {
   audio.pause()
 }
 function show_runtime() {
-  var newDay = "2024/02/10 00:00:00";
+  var newDay = "2026/02/17 00:00:00";
   var countDate = new Date(newDay);
   var now = new Date().getTime();
   var gap = countDate - now;
