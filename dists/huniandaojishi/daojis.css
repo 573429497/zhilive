@@ -1,0 +1,209 @@
+@media screen and (max-width: 1025px) {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background: rgb(129, 155, 190) url(./image/2024l.png);
+		/* background: rgb(129, 155, 190); */
+		background-size: cover;
+		background-position: center center;
+		height: 100%;
+	}
+	.container {
+		margin: 0;
+		color: #fff;
+		line-height: normal;
+		position: absolute;
+		align-items: center;
+		left: 5%;
+		right: 5%;
+	}
+	.container h2 {
+		font-size: 6em;
+		text-align: center;
+		margin: 10% 0;
+		color: #fff;
+	}
+	.container h2 span {
+		color: #fff;
+		display: block;
+		text-align: center;
+		font-size: 0.3em;
+		font-weight: 300;
+		letter-spacing: 2px;
+	}
+	.countdown {
+		display: flex;
+		justify-content: space-around;
+		margin: 0;
+	}
+	.countdown div {
+		width: 20%;
+		height: 13vw;
+		margin: 0 10px;
+		line-height: 13vw;
+		font-size: 2em;
+		position: relative;
+		text-align: center;
+		background: #333333;
+		color: #ffffff;
+		font-weight: 500;
+		border-radius: 10px 10px 0 0;
+		animation: name 1s infinite;
+
+	}
+	.countdown div:before {
+		content: '';
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		background: #b00000;
+		color: #ffffff;
+		font-size: 0.4em;
+		line-height: 35px;
+		font-weight: 300;
+		border-radius: 0 0 10px 10px;
+		animation: name 1s infinite;
+
+	}
+	.countdown #day:before {
+		content: '天';
+	}
+	.countdown #hour:before {
+		content: '时';
+	}
+	.countdown #minute:before {
+		content: '分';
+	}
+	.countdown #second:before {
+		content: '秒';
+	}
+}
+ 
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+@media screen and (min-width: 1025px) {
+	body {
+		background: rgb(129, 155, 190) url(./image/2024l.png);
+		/* background: rgb(129, 155, 190); */
+		background-attachment: fixed;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+	}
+	.container {
+		position: absolute;
+		top: 80px;
+		left: 100px;
+		right: 100px;
+		bottom: 80px;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		box-shadow: 0 50px 50px rgba(0, 0, 0, 0.8),
+			0 0 0 100px rgba(0, 0, 0, 0.3);
+	}
+	.container h2 {
+		text-align: center;
+		font-size: 10em;
+		line-height: 0.7em;
+		color: #ffffff;
+		margin-top: -80px;
+	}
+	.container h2 span {
+		display: block;
+		font-weight: 300;
+		letter-spacing: 6px;
+		font-size: 0.2em;
+	}
+	.countdown {
+		display: flex;
+		margin-top: 50px;
+	}
+	.countdown div {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+		background: #333;
+		color: #fff;
+		margin: 0 15px;
+		font-size: 3em;
+		font-weight: 500;
+		border-radius: 10px 10px 0 0;
+		animation: name 1s infinite;
+
+	}
+	.countdown div:before {
+		content: '';
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		width: 100%;
+		height: 35px;
+		background: #b00000;
+		color: #ffffff;
+		font-size: 0.35em;
+		line-height: 35px;
+		font-weight: 300;
+		border-radius: 0 0 10px 10px;
+		animation: name 1s infinite;
+
+	}
+	.countdown #day:before {
+		content: '天';
+	}
+	.countdown #hour:before {
+		content: '时';
+	}
+	.countdown #minute:before {
+		content: '分';
+	}
+	.countdown #second:before {
+		content: '秒';
+	}
+}
+canvas {
+	width: 100%;
+	height: 100%;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+#btn{
+  margin: 40px;
+  width: 100px;
+  height: 30px;
+  background: pink;
+  text-align: center;
+  color: darkred;
+  line-height: 30px;
+}
+.frames{
+	animation: name1 2s infinite;
+}
+@keyframes name{
+  0%  {box-shadow: 0px 0px 10px rgb(180, 243, 64) inset;}
+  20%  {box-shadow: 0px 0px 10px rgb(243, 64, 183) inset;}
+  40%  {box-shadow: 0px 0px 10px rgb(185, 204, 16) inset;}
+  60%  {box-shadow: 0px 0px 10px rgb(238, 93, 194) inset;}
+  80%  {box-shadow: 0px 0px 10px rgb(180, 243, 64) inset;}
+  100%  {box-shadow: 0px 0px 10px rgb(180, 243, 64) inset;}
+}
+
+@keyframes name1{
+  0%  {transform: scale(1)}
+  50%  {transform: scale(0.8)}
+	100%  {transform: scale(1)}
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="daojis.css">
+  <title>春节倒计时</title>
+  <style>
+    .audio_box_btn {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+
+    }
+
+    .audio_box_btn img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      color: #ffffff;
+      background: linear-gradient(180deg, #FF6259 0%, #FE4777 100%);
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .box_btn {
+      position: fixed;
+      bottom: 10px;
+    }
+
+    .close {
+      animation: moves 2s linear infinite;
+    }
+
+    @keyframes moves {
+      0% {
+        transform: rotate(0deg);
+
+      }
+
+      50% {
+        transform: rotate(180deg);
+
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 id="box"><span id="title">春节倒计时</span>2024</h2>
+    <div class="countdown">
+      <div id="day">--</div>
+      <div id="hour">--</div>
+      <div id="minute">--</div>
+      <div id="second">--</div>
+    </div>
+  </div>
+  <div class="box_btn">
+
+    <!-- <div onclick="qingrjie()" class="btn">214情人节</div>
+      <div onclick="yuandan()" class="btn">元旦</div>
+      <div onclick="chunjie()" class="btn">兔年</div> -->
+  </div>
+  <audio id="audio" class="pos" height="100" width="100" autoplay="true" loop="true" src="./image/1234.mp3"></audio>
+  <div class="audio_box_btn frames" onclick="play()" id="playShow"><img src="./image//icon_music_close.png" alt="">
+  </div>
+  <div class="audio_box_btn close" onclick="audioClose()" id="closeShow" style="display: none;"><img
+      src="./image/icon_music.png" alt=""></div>
+  <script src="djs.js"></script>
+
+</body>
+
+</html>

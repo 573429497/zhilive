@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="coment.css" />
+  <link rel="stylesheet" type="text/css" href="keyframes.css" />
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <title>休闲小游戏</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div  id="box" style="height: 100vh;">
+    <a class="line" href="#" style="display: none;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+  </a>
+  <!-- Swiper -->
+    <div class="swiper mySwiper">
+     <div class="swiper-wrapper">
+      <!-- <div class="swiper-slide">
+        <img src="./images/yibilianzhu.jpg" />
+        <div class="swiper_link">
+          <a href="./yibilianzhu/index.html"><span class="swiper_link_title">一笔连珠</span></a>
+        </div>
+      </div> -->
+       <div class="swiper-slide">
+         <img src="./images/tuixiangzi.png" />
+         <div class="swiper_link"><a href="./tuixiangzi.html"><span class="swiper_link_title">推箱子</span></a></div>
+       </div>
+       <div class="swiper-slide">
+         <img src="./images/xiaoniaofei.png" />
+         <div class="swiper_link"><a href="./xiaoniaofeifei/index.html"><span class="swiper_link_title">小鸟飞呀飞</span></a></div>
+       </div>
+       <div class="swiper-slide">
+         <img src="./images/feijidazhan.png" />
+         <div class="swiper_link">
+           <a href="./dafeiji/index.html"><span class="swiper_link_title">飞机大战</span></a> 
+         </div>
+       </div>
+       <div class="swiper-slide">
+         <img src="./images/yigedoubunengsi.png" />
+         <div class="swiper_link">
+           <a href="./yigdoubunengsi/index.html"><span class="swiper_link_title">一个都不能死</span></a> 
+         </div>
+       </div>
+       
+     </div>
+     <!-- <div class="swiper-pagination"></div> -->
+     
+   </div>
+
+   <div class="tab_box">
+    <div class="tab_box_item" onclick="location.href='./chuyintanzou/index.html'">
+      <img src="./images/yinyue.png" alt="" class="img">
+      <div>弹奏解压</div>
+    </div>
+     <div class="tab_box_item" onclick="location.href='./huniandaojishi/daojishi.html'">
+       <img src="./images/daojishi.png" alt="" class="img">
+       <div>倒计时</div>
+     </div>
+     <div class="tab_box_item" onclick="location.href='./lizitexiao/xuanz.html'">
+        <img src="./images/texiao.png" alt="" class="img">
+      <div>粒子特效</div>
+     </div>
+      <div class="tab_box_item">
+        <img src="./images/bengdi.png" alt="" class="img">
+       <div onclick="play()" id="playShow">蹦迪模式</div>
+       <div onclick="audioClose()" id="closeShow" style="display: none;">关闭蹦迪模式</div>
+       <div onclick="nextPlay()" id="nextPlay" style="display: none;">下一首</div>
+       <div onclick="previousPlay()" id="previousPlay" style="display: none;">上一首</div>
+      </div>
+   </div>
+
+   <div class="card">
+    <div class="card_list" onclick="location.href='./mishi/index.html'">
+      <img class="card_list_img" src="./images/mishi.png"></img>
+      <div class="card_list_title">密室逃脱</div>
+    </div>
+    <div class="card_list" onclick="location.href='./jumpone/index.html'">
+     <img class="card_list_img" src="./images/tiaoyitiao.png"></img>
+     <div class="card_list_title">跳一跳</div>
+   </div>
+  </div>
+
+   <div class="card">
+     <div class="card_list" onclick="location.href='./tuixiangzi.html'">
+       <img class="card_list_img" src="./images/tuixiangzi.png"></img>
+       <div class="card_list_title">推箱子</div>
+     </div>
+     <div class="card_list" onclick="location.href='./xiaoniaofeifei/index.html'">
+      <img class="card_list_img" src="./images/xiaoniaofei.png"></img>
+      <div class="card_list_title">小鸟飞呀飞</div>
+    </div>
+   </div>
+
+   <div class="card">
+    <div class="card_list" onclick="location.href='./els-fangkuai/index.html'">
+      <img class="card_list_img" src="./images/elsgk.jpg"></img>
+      <div class="card_list_title">俄罗斯方块</div>
+    </div>
+    <div class="card_list" onclick="location.href='./tanchishe/index.html'">
+     <img class="card_list_img" src="./images/tcs.jpg"></img>
+     <div class="card_list_title">贪吃蛇</div>
+   </div>
+  </div>
+
+  <div class="card">
+    <div class="card_list" onclick="location.href='./dafeiji/index.html'">
+      <img class="card_list_img" src="./images/feijidazhan.png"></img>
+      <div class="card_list_title">飞机大战</div>
+    </div>
+    <div class="card_list" onclick="location.href='./yigdoubunengsi/index.html'">
+     <img class="card_list_img" src="./images/yigedoubunengsi.png"></img>
+     <div class="card_list_title">一个都不能死</div>
+   </div>
+  </div>
+  <div style="height: 50px;"></div>
+
+  <!-- <div class="card">
+    <div class="card_list">
+      <div class="card_list_img">123</div>
+      <div class="card_list_title">粒子特效</div>
+    </div>
+    <div class="card_list">
+     <div class="card_list_img">123</div>
+     <div class="card_list_title">一个都不能死</div>
+   </div>
+  </div> -->
+     <!-- <div class="box_nav">
+       <a href="./tuixiangzi.html"><span class="span" style="color: #ffffff;">推箱子</span></a>
+       <a href="./xiaoniaofeifei/index.html"><span class="span" style="color: #ffffff;">小鸟飞呀飞</span></a>
+       <a href="./els-fangkuai/index.html"><span class="span" style="color: #ffffff;">俄罗斯方块</span></a>
+       <a href="./tanchishe/index.html"><span class="span" style="color: #ffffff;">贪吃蛇</span></a>
+       <a href="./feidegenggao/index.html"><span style="color: #ffffff;">飞得更高</span></a>
+       <a href="./dafeiji/index.html"><span class="span" style="color: #ffffff;">飞机大战</span></a> 
+       <a href="./yigdoubunengsi/index.html"><span class="span" style="color: #ffffff;">一个都不能死</span></a> 
+       <a href="./yibilianzhu/index.html"><span class="span" style="color: #ffffff;">一笔连珠</span></a> 
+       <a href="./lizitexiao/xuanz.html"><span class="span" style="color: #ffffff;">粒子特效</span></a> 
+       </div> -->
+   
+     <audio id="audio" class="pos" height="100" width="100" autoplay="true" loop="true" src="./images/qingzizuida.mp3"></audio>
+     <audio id="audio1" class="pos" height="100" width="100" autoplay="true" loop="true" src="./images/biubiubiu.mp3"></audio>
+
+       <!-- <div class="audio_box">
+         <div class="audio_box_btn" onclick="play()" id="playShow">开启蹦迪模式</div>
+         <div class="audio_box_btn" onclick="audioClose()" id="closeShow" style="display: none;">关闭蹦迪模式</div>
+         <div class="audio_box_btn" onclick="nextPlay()" id="nextPlay" style="display: none;">下一首</div>
+         <div class="audio_box_btn" onclick="previousPlay()" id="previousPlay" style="display: none;">上一首</div>
+       </div> -->
+<!-- 
+       <div class="box_nav">
+        <a href="./huniandaojishi/daojishi.html"><span class="span" style="color: #ffffff;">春节倒计时</span></a>
+        </div> -->
+  </div>
+
+
+
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+       if(!window.name){
+          window.name = 'test';
+          window.location.reload();
+      }
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        autoplay:true,
+        loop : true,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+
+     var audio = document.getElementById('audio');
+     var audio1 = document.getElementById('audio1');
+     var box = document.getElementById('box');
+    var playShow = document.getElementById("playShow")
+    var closeShow = document.getElementById("closeShow")
+    var next = document.getElementById("nextPlay")
+    var previous = document.getElementById("previousPlay")
+    var line = document.querySelector(".line")
+    var swiper = document.querySelector(".swiper")
+      function play(){
+        box.classList.add("box")
+        playShow.style.display = "none";
+        closeShow.style.display = "block";
+        next.style.display = "block";
+        playShow.style.display = "none";
+        line.style.display = "inline-block";
+        swiper.style.paddingTop = "0px"
+        audio.play()
+      }
+      function audioClose(){
+        box.classList.remove("box")
+        playShow.style.display = "block";
+        closeShow.style.display = "none";
+        line.style.display = "none";
+        swiper.style.paddingTop = "24px"
+
+        previous.style.display = "none";
+        next.style.display = "none";
+        audio.pause()
+        audio1.pause()
+
+      }
+     function nextPlay(){
+      previous.style.display = "block";
+      next.style.display = "none";
+      audio1.play()
+      audio.pause()
+     }
+     function previousPlay(){
+      previous.style.display = "none";
+      next.style.display = "block";
+      audio.play()
+      audio1.pause()
+     }
+    </script>
+</body>
+</html>

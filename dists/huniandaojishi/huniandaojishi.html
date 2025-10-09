@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>春节倒计时</title>
+  <style>
+    .box{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div>春节倒计时</div>
+    <span id="id1"></span>天<span id="id2"></span>小时<span id="id3"></span>分<span id="id4"></span>秒
+  </div>
+</body>
+
+<script type="text/javascript">
+  var d = document.getElementById("id1");
+  var h = document.getElementById("id2");
+  var m = document.getElementById("id3");
+  var s = document.getElementById("id4");
+  
+  var endTime = new Date("2022/02/01");
+  setInterval(function(){
+    var nowTime = new Date();
+    var diff = endTime.getTime() - nowTime.getTime();
+    diff = parseInt(diff/1000);
+    var days = toTwo(parseInt(diff/(24*3600)));//剩余天数
+    var hours = toTwo(parseInt(diff % (24*3600) / 3600));
+    var minutes = toTwo(parseInt(diff % 3600 / 60));
+    var seconds = toTwo(diff % 60);
+    
+    d.innerHTML = days;
+    h.innerHTML = hours;
+    m.innerHTML = minutes;
+    s.innerHTML = seconds;
+  }, 1000)
+  function toTwo(v){
+    return v < 10 ? '0'+v:v;
+  }
+</script>
+</html>
